@@ -1,4 +1,3 @@
-# WORKING GAME
 # Imports
 import pygame, sys
 from pygame.locals import *
@@ -46,7 +45,7 @@ class Enemy(pygame.sprite.Sprite):
 
     def move(self):
         # global SCORE
-        self.rect.move_ip(0, SPEED)  # speed = 5
+        self.rect.move_ip(0, random.randint(1, 5))  # speed = 5
         if (self.rect.bottom > 600):
             # SCORE += 1
             self.rect.top = 0
@@ -96,6 +95,7 @@ class Coins(pygame.sprite.Sprite):
             #     Aydana_rich.add(coin)
             self.rect.top = 0
             self.rect.center = (random.randint(40, WIDTH - 40), 0)
+
 
 
 # Setting up Sprites
